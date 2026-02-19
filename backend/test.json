@@ -1,0 +1,26 @@
+{
+    testUsers : [
+        {
+            "id": 1,
+            "name": "Alice",
+            "email": "vinenr@gmail.com"
+        },
+        {
+            "id": 2,
+            "name": "Bob",
+            "email": "asoinoinscoi@gmail.com"
+        }
+    ]
+    testPass : [
+        {
+            "id": 1,
+            "userId": 1,
+            "password": "password123"
+        },
+        {
+            "id": 2,
+            "userId": 2,
+            "password": "securepass456"
+        }
+    ]
+}

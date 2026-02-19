@@ -39,5 +39,9 @@ def formSubmit():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api')
+def api():
+    return jsonify({"message": "This is the API endpoint"})
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5000, debug=True)
