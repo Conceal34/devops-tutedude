@@ -43,5 +43,17 @@ def formSubmit():
 def api():
     return jsonify({"message": "This is the API endpoint"})
 
+@app.route("/submittodoitem", methods=["POST"])
+def submit_todo_item():
+    try:
+        data = request.json
+        collection.insert_one({
+            "itemName": data.get("itemName"),
+            "itemDescription": data.get("itemDescription")
+        })
+        return jsonify({"message": "Todo item submitted successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 5000, debug=True)
